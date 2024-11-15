@@ -1,104 +1,91 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-main() {
-  runApp(const App());
+void main() {
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Assignment 2',
-      home: Ap(),
+      home: const MyHomePage(),
     );
   }
 }
 
-class Ap extends StatelessWidget {
-  const Ap({super.key});
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'My Profile',
-          style: TextStyle(fontWeight: FontWeight.normal),
-        ),
         backgroundColor: Colors.amber,
-        toolbarHeight: 60,
+        title: Text('My Profile'),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.phone)),
+          IconButton(onPressed: (){}, icon:Icon(Icons.add)),
+          IconButton(onPressed: (){}, icon:Icon(Icons.settings)),
+          IconButton(onPressed: (){}, icon:Icon(Icons.call)),
         ],
       ),
-      body: const Body(),
-    );
-  }
-}
-
-class Body extends StatelessWidget {
-  const Body({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Column(
-            children: const [
-              CircleAvatar(
-                radius: 100,
-                child: Icon(
-                  Icons.icecream_outlined,
-                  size: 100,
+      body: Center(
+        child: Column(
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 80,
+                    child: Icon(Icons.icecream,size: 80),
+                  ),
                 ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                "Ice cream is very delicious right?",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-              ),
-            ],
-          ),
-          Column(
-            children: const [
-              CircleAvatar(
-                radius: 100,
-                child: Icon(
-                  Icons.code,
-                  size: 100,
+                Text('Ice cream is very delicious right?',
+                  style: TextStyle(fontSize:17,fontWeight: FontWeight.bold ),
                 ),
-              ),
-              Text(
-                "Programming is not boring if you love it",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-              ),
-            ],
-          ),
-          Column(
-            children: const [
-              CircleAvatar(
-                radius: 100,
-                child: Icon(
-                  Icons.egg_outlined,
-                  size: 100,
+              ],
+            ),
+            SizedBox(height: 25,),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 80,
+                    child: Icon(Icons.add,size: 80),
+                  ),
                 ),
-              ),
-              Text(
-                "If you submit code directly from ChatGPT \nthen mark will be 0",
-                textAlign: TextAlign.left,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-              ),
-            ],
-          ),
-        ],
+                Text('Programming is not boring if you love it',
+                  style: TextStyle(fontSize:17,fontWeight: FontWeight.bold ),
+                ),
+              ],
+            ),
+            SizedBox(height: 25,),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 80,
+                    child: Icon(Icons.water_drop,size: 80),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                  child: Text('If you submit code directly copy from chatgpt then mark will 0',
+                    style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
