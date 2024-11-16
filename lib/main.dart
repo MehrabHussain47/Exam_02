@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget{
               backgroundColor: Colors.grey,
             ),
             SizedBox(height: 10,),
-            Text('Donote Blood', style: TextStyle(fontSize:16, fontWeight: FontWeight.bold),)
+            Text('Donote Blood', style: TextStyle(fontSize:18, fontWeight: FontWeight.bold),)
           ],
         ),
       ),
