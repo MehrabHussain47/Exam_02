@@ -1,145 +1,55 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// void main(){
-//   runApp(MyApp());
-// }
-//
-// class MyApp extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: HomeScreen(),
-//       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(
-//         appBarTheme: AppBarTheme(
-//             titleTextStyle: TextStyle(
-//               color: Colors.white,
-//               fontSize: 20,
-//             ),
-//             iconTheme: IconThemeData(
-//                 color: Colors.white
-//             )
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-// class HomeScreen extends StatelessWidget{
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Need Blood'),
-//         centerTitle: true,
-//         backgroundColor: Colors.red,
-//         actions: [
-//           IconButton(onPressed: (){}, icon: Icon(Icons.add))
-//         ],
-//       ),
-//       body: Center(
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.center,
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             CircleAvatar(
-//               child: Icon(Icons.bloodtype_outlined, size: 90, color: Colors.red,),
-//               radius: 80,
-//               backgroundColor: Colors.grey,
-//             ),
-//             SizedBox(height: 10,),
-//             Text('Donote Blood', style: TextStyle(fontSize:16, fontWeight: FontWeight.bold),)
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-void main() {
-  runApp(const MyApp());
+void main(){
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: const MyHomePage(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+            titleTextStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+            iconTheme: IconThemeData(
+                color: Colors.white
+            )
+        ),
+      ),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
+class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text('My Profile'),
+        title: Text('Need Blood'),
+        centerTitle: true,
+        backgroundColor: Colors.red,
         actions: [
-          IconButton(onPressed: (){}, icon:Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon:Icon(Icons.settings)),
-          IconButton(onPressed: (){}, icon:Icon(Icons.call)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.add))
         ],
       ),
       body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 80,
-                    child: Icon(Icons.icecream,size: 80),
-                  ),
-                ),
-                Text('Ice cream is very delicious right?',
-                  style: TextStyle(fontSize:17,fontWeight: FontWeight.bold ),
-                ),
-              ],
+            CircleAvatar(
+              child: Icon(Icons.bloodtype_outlined, size: 90, color: Colors.red,),
+              radius: 80,
+              backgroundColor: Colors.grey,
             ),
-            SizedBox(height: 25,),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 80,
-                    child: Icon(Icons.add,size: 80),
-                  ),
-                ),
-                Text('Programming is not boring if you love it',
-                  style: TextStyle(fontSize:17,fontWeight: FontWeight.bold ),
-                ),
-              ],
-            ),
-            SizedBox(height: 25,),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 80,
-                    child: Icon(Icons.water_drop,size: 80),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8.0,right: 8.0),
-                  child: Text('If you submit code directly copy from chatgpt then mark will 0',
-                    style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
-            ),
+            SizedBox(height: 10,),
+            Text('Donote Blood', style: TextStyle(fontSize:16, fontWeight: FontWeight.bold),)
           ],
         ),
       ),
